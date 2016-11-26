@@ -1,5 +1,6 @@
 package streams
 
+
 /**
  * A main object that can be used to execute the Bloxorz solver
  */
@@ -46,4 +47,5 @@ object Bloxorz extends App {
   }
 
   println(Level1.solution)
+
 }

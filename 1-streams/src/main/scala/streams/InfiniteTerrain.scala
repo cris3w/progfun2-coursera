@@ -1,5 +1,6 @@
 package streams
 
+
 /**
  * This trait defines an infinite terrain, where the block can
  * go on any position.
