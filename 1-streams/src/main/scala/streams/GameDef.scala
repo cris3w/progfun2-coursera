@@ -3,6 +3,9 @@ package streams
 
 /**
   * This trait represents the layout and building blocks of the game
+  *
+  * @TODO: SHOULD RENAME `x` and `y` in class Pos to `row` and `col`. It's
+  * confusing to have `x` being the vertical axis.
   */
 trait GameDef {
 
@@ -10,8 +13,8 @@ trait GameDef {
     * The case class `Pos` encodes positions in the terrain.
     *
     * IMPORTANT NOTE
-    *  - The `x` coordinate denotes the position on the vertical axis
-    *  - The `y` coordinate is used for the horizontal axis
+    *  - The `row` coordinate denotes the position on the vertical axis
+    *  - The `col` coordinate is used for the horizontal axis
     *  - The coordinates increase when moving down and right
     *
     * Illustration:
@@ -24,14 +27,13 @@ trait GameDef {
     *
     *   ^
     *   |
-    *
     *   rows
     */
   case class Pos(row: Int, col: Int) {
-    /** The position obtained by changing the `x` coordiante by `d` */
+    /** The position obtained by changing the `row` coordiante by `d` */
     def dx(d: Int) = copy(row = row + d, col)
 
-    /** The position obtained by changing the `y` coordiante by `d` */
+    /** The position obtained by changing the `col` coordiante by `d` */
     def dy(d: Int) = copy(row, col = col + d)
   }
 
